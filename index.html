@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> javascript crud</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="products">
+        <div class="container mb-5">
+            <h1 class="my-5 text-info text-center">products</h1>
+
+            <div class="form-group mt-3">
+                <label> Product Name : </label>
+                <input onkeyup="validatForm(this.value)" id="productName" class="form-control inp mb-3">
+                <small id="warning" class="alert alert-danger  d-none"> product name mast start width capital letter and contain at least 3 letter and maximun 20 letter</small>
+
+            </div>
+
+
+            <div class="form-group mt-3">
+                <label> Product price : </label>
+                <input id="productPrice" class="form-control inp">
+            </div>
+
+            <div class="form-group mt-3">
+                <label> Product category : </label>
+                <input id="productCategory" class="form-control inp">
+            </div>
+
+
+            <!-- <div class="form-group mt-3">
+                <label> Product code : </label>
+                <input id="productCode" class="form-control inp">
+            </div> -->
+
+            <div class="form-group mt-3">
+                <label> Product description : </label>
+                <textarea id="productDesc" class="form-control inp"></textarea>
+            </div>
+
+
+            <button id="addBtn" class="btn btn-info float-left my-4 ">Add Product </button>
+
+            <div class="clearfix"></div>
+
+
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end products section  -->
+
+    <!-- start to show  products  -->
+    <section class="show_products my-5">
+        <div class="container">
+            <h2 class="text-center my-3">our Products </h2>
+            <input onkeyup="searchProducts(this.value)" class="form-control w-50 mx-auto mb-5 mt-3" placeholder="search">
+            <div class="row " id="productsRow">
+
+
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+
+    <!-- end to show  products  -->
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+
+    <script src="js/test.js"></script>
+
+</body>
+
+
+</html>
